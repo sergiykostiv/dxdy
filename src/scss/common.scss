@@ -1,0 +1,86 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.main__button {
+    background-color: #6966FF;
+    padding: toRem(12) toRem(16);
+    border-radius: toRem(7);
+    line-height: toRem(24);
+    letter-spacing: -1.1%;
+    font-size: toRem(16);
+    font-weight: 500;
+    white-space: nowrap;
+
+    @media (max-width:$mobile){
+        padding: toRem(10) toRem(14);
+    }
+}
+
+.second__button {
+    background-color: $secondary;
+}
+
+.info-block {
+    max-width: toRem(600);
+    margin: 0 auto;
+    padding: toRem(80) 0;
+    text-align: center;
+
+    @media (max-width:$mobile){
+        padding: toRem(40) 0;
+    }
+
+		&__title {
+            font-size: toRem(40);
+            line-height: toRem(48);
+            letter-spacing: -2.2%;
+            font-weight: 700;
+            margin-bottom: toRem(16);
+
+            @media (max-width:$mobile){
+                font-size: toRem(24);
+                line-height: toRem(32);
+                letter-spacing: -1.7%;
+            }
+        }
+
+		&__description {
+            color: $text-default;
+            font-size: toRem(18);
+            line-height: toRem(24);
+            letter-spacing: -1.4%;
+            margin-bottom: toRem(24);
+
+            @media (max-width:$mobile){
+                font-size: toRem(16);
+                line-height: toRem(24);
+                letter-spacing: -1.1%;
+            }
+        }
+
+		&__action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: toRem(8);
+            color: $accent;
+            font-size: toRem(18);
+            line-height: toRem(24);
+            letter-spacing: -1.4%;
+
+            &-arrow {
+                width: 24px;
+                height: 24px;
+            }
+
+            @media (max-width:$mobile){
+                font-size: toRem(16);
+                line-height: toRem(24);
+                letter-spacing: -1.1%;
+
+                &-arrow {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+}

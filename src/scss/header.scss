@@ -1,0 +1,52 @@
+.header {
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        max-width: toRem(1376);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        column-gap: toRem(10);
+        align-items: center;
+        padding: toRem(24) 0;
+
+        @media (max-width: toRem(1400)){
+            padding: toRem(24);
+        }
+
+        @media (max-width: toEm(884)){
+            grid-template-columns: 1fr auto;
+        }
+
+        @media (max-width:$mobile){
+            padding: toRem(16) toRem(24);
+            overflow: hidden;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 5;
+
+        &-img {
+            @include adaptiveValue("width", 112, 80);
+            @include adaptiveValue("height", 66, 48);
+        }
+
+        @media (max-width:$mobile){
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(16);
+    }
+
+    @media (max-width:$mobile){
+        &__button span {
+            display: none;
+        }    
+    }
+}

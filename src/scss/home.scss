@@ -1,0 +1,146 @@
+//====================================================================================================
+
+// Hero section 
+
+.hero {
+
+		&__content {
+            padding: toRem(80) 0;
+
+            @media (max-width:$mobile){
+                @include adaptiveValue("padding-top", 80, 40);
+                @include adaptiveValue("padding-bottom", 80, 40);
+            }
+        }
+
+		&__title {
+            font-size: toRem(80);
+            font-weight: 700;
+            letter-spacing: -2.2%;
+            line-height: toRem(88);
+            text-align: center;
+            margin-bottom: toRem(40);
+
+            @media (max-width:$mobile){
+                @include adaptiveValue("line-height", 88, 48);
+                @include adaptiveValue("font-size", 80, 40);
+            }
+            
+            span {
+                position: relative;
+            }
+
+            &-deco {
+                position: absolute;
+                bottom: -30%;
+                left: -8%;
+                width: toRem(277);
+                height: toRem(24);
+
+                @media (max-width:$mobile){
+                     @include adaptiveValue("width", 277, 115); 
+                }
+            }
+        }
+
+		&__buttons {
+            display: flex;
+            justify-content: center;
+            column-gap: toRem(32);
+            row-gap: toRem(16);
+
+            @media (max-width:$mobile){
+                flex-wrap: wrap;
+            }
+        }
+
+		&__buttons-item {
+            display: flex;
+            align-items: center;
+            gap: toRem(12);
+            letter-spacing: 1.1%;
+            font-size: toRem(16);
+            line-height: toRem(24);
+            font-weight: 500;
+
+            @media (max-width: toEm(500)) {
+                justify-content: center;
+                width: 100%;
+                font-size: toRem(14);
+                line-height: toRem(20);
+            }
+        }
+}
+.main {
+
+		&__button-link {}
+}
+
+// Statistic section
+
+.statistics {
+    margin-bottom: toRem(128);
+
+    @media (max-width:$mobile){
+        margin-bottom: toRem(66);
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        column-gap: toRem(48);
+        row-gap: toRem(32);
+
+        @media (max-width:$mobile){
+                flex-direction: column; 
+        }
+    }
+
+    &__item {
+        text-align: center;
+        font-family: 'SpaceMono';
+    }
+
+    &__point {
+        color: $text-primary;
+        line-height: toRem(32);
+        font-size: toRem(20);
+
+        @media (max-width:$mobile){
+            line-height: toRem(24);
+        }
+    }
+
+    &__description {
+        color: $text-default;
+        font-size: toRem(18);
+        line-height: toRem(24);
+
+            @media (max-width:$mobile){
+            line-height: toRem(32);
+            font-size: toRem(16);
+        }
+    }
+}
+
+
+.projects {
+    position: relative;
+    
+    &__info-block-arrow {
+        width: toRem(32);
+        height: toRem(100);
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width:$mobile){
+            width: toRem(20);
+            height: toRem(50);
+            top: -9%;
+        }
+    }
+}
+
+//====================================================================================================

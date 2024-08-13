@@ -1,0 +1,49 @@
+// ===============
+// colors palette
+// ===============
+
+// Basic colors (Основні кольори сайту):
+
+$white: #FFFFFF; // White color
+$black: #000000; // Black color
+
+// Background colors (Фонові кольори):
+
+$bg-primary: #1C1C28; // BG primary background color - (Основний фоновий колір сайту)
+$bg-menu-open: #393953; // BG open menu burger
+$nav-hover: #4F4C64; // BG navigation bar item
+
+// Site colors (Кольори сайту):
+
+$accent: #6966FF; // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+$secondary: #393953;
+
+// Text colors (Текстові кольори):
+
+$text-primary: #FFFFFF; // Text primary text color - (Основний текстовий колір сайту)
+$text-default: #C8C7D8; // Default text navigation bar
+
+:root {
+
+	// Site colors (Кольори сайту):
+	// =================================================================
+	// --primary:  // Site main color - (Основний колір сайту)
+	// --secondary:  // Site secondary color - (Додатковий колір сайту)
+	// --accent: // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+	// --inverse:  // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+
+	// Background colors (Фонові кольори):
+	// =================================================================
+	// --bg-primary:  // BG primary background color - (Основний фоновий колір сайту)
+	// --bg-secondary:  // BG secondary background color - (Додатковий фоновий колір сайту)
+	// --bg-accent:  // BG accent - наприклад, може бути використаний для встановлення кольору фону для акцентних елементів, таких як кнопки або іконки.
+	// --bg-inverse:  // BG inverse - наприклад, може використовуватися для налаштування кольору фону на світлому тексті.
+
+	// Text colors (Текстові кольори):
+	// =================================================================
+	// --text-primary:  // Text primary text color - (Основний текстовий колір сайту)
+	// --text-secondary:  // Text secondary text color - (Додатковий текстовий колір сайту)
+	// --text-accent:  // Text accent - наприклад, може використовуватися для встановлення кольору тексту для акцентних елементів на сторінці, таких як заголовки або кнопки.
+	// --text-inverse:  // Text inverse - наприклад, може використовуватися для налаштування кольору тексту на темному фоні.
+	// =================================================================
+}
