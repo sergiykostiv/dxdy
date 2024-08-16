@@ -36,16 +36,17 @@ function initSliders() {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			//autoHeight: true,
+			grabCursor: true,
+			
+			// spaceBetween: 24,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
+			// simulateTouch: false,
+			// loop: true,
+			// preloadImages: false,
+			// lazy: true,
 
 			/*
 			// Ефекти
@@ -77,28 +78,30 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+
 			// Брейкпоінти
 			breakpoints: {
+				320: {
+				slidesPerView: 1.1,
+				spaceBetween: 16,
+				},
+				// when window width is >= 480px
+				480: {
+				slidesPerView: 1.5,
+				spaceBetween: 16,
+				},
+				// when window width is >= 640px
 				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+				slidesPerView: 2.5,
+				spaceBetween: 24,
 				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					// when window width is >= 640px
+				991: {
+				slidesPerView: 3.5,
+				spaceBetween: 24,
 				},
 			},
-			*/
+
 			// Події
 			on: {
 

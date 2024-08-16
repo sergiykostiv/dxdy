@@ -29,58 +29,134 @@
         padding: toRem(40) 0;
     }
 
-		&__title {
-            font-size: toRem(40);
-            line-height: toRem(48);
-            letter-spacing: -2.2%;
-            font-weight: 700;
-            margin-bottom: toRem(16);
+    &__title {
+        font-size: toRem(40);
+        line-height: toRem(48);
+        letter-spacing: -2.2%;
+        font-weight: 700;
+        margin-bottom: toRem(16);
 
-            @media (max-width:$mobile){
-                font-size: toRem(24);
-                line-height: toRem(32);
-                letter-spacing: -1.7%;
-            }
+        @media (max-width:$mobile){
+            font-size: toRem(24);
+            line-height: toRem(32);
+            letter-spacing: -1.7%;
+        }
+    }
+
+    &__description {
+        color: $text-default;
+        font-size: toRem(18);
+        line-height: toRem(24);
+        letter-spacing: -1.4%;
+        margin-bottom: toRem(24);
+
+        @media (max-width:$mobile){
+            font-size: toRem(16);
+            line-height: toRem(24);
+            letter-spacing: -1.1%;
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: toRem(8);
+        color: $accent;
+        font-size: toRem(18);
+        line-height: toRem(24);
+        letter-spacing: -1.4%;
+
+        &-arrow {
+            width: 24px;
+            height: 24px;
         }
 
-		&__description {
-            color: $text-default;
-            font-size: toRem(18);
+        @media (max-width:$mobile){
+            font-size: toRem(16);
             line-height: toRem(24);
-            letter-spacing: -1.4%;
-            margin-bottom: toRem(24);
-
-            @media (max-width:$mobile){
-                font-size: toRem(16);
-                line-height: toRem(24);
-                letter-spacing: -1.1%;
-            }
-        }
-
-		&__action {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            column-gap: toRem(8);
-            color: $accent;
-            font-size: toRem(18);
-            line-height: toRem(24);
-            letter-spacing: -1.4%;
+            letter-spacing: -1.1%;
 
             &-arrow {
-                width: 24px;
-                height: 24px;
-            }
-
-            @media (max-width:$mobile){
-                font-size: toRem(16);
-                line-height: toRem(24);
-                letter-spacing: -1.1%;
-
-                &-arrow {
-                    width: 16px;
-                    height: 16px;
-                }
+                width: 16px;
+                height: 16px;
             }
         }
+    }
+}
+
+.card-title {
+    font-size: toRem(24);
+    line-height: toRem(32);
+    font-weight: 700;
+    letter-spacing: -1.9%;
+
+    @media (max-width:$mobile){
+        font-size: toRem(20);
+        letter-spacing: -1.7%;
+    }
+}
+
+.card-sub-title {
+    color: $text-card-gray;
+    font-family: "SpaceMono";
+    font-size: toRem(16);
+    line-height: toRem(24);
+
+    @media (max-width:$mobile){
+        font-size: toRem(14);
+    }
+}
+
+.card-text {
+    font-size: toRem(16);
+    line-height: toRem(24);
+    letter-spacing: -1.1%;
+
+    @media (max-width:$mobile){
+        line-height: toRem(20);
+        font-size: toRem(14);
+        letter-spacing: -0.6%;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $bg-menu-open;
+    border-radius: toRem(16);
+    padding: toRem(24);
+    object-fit: cover;
+
+    &__category {
+        margin-bottom: toRem(8);
+    }
+
+    &__title {
+        margin-bottom: toRem(8);
+    }
+
+    &__amount {
+        margin-bottom: toRem(16);
+    }
+
+    &__description {
+        
+    }
+
+    &__avatar-list {
+        display: flex;
+    }
+
+    &__avatar-item {
+        &:not(:first-child) {
+            transform: translateX(-20px);
+        }
+    }
+
+    &__avatar-img {
+        border-radius: 50px;
+        border: solid 2px transparent;
+    }
 }
