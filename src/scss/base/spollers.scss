@@ -4,91 +4,78 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
-	gap: 15px;
+	// gap: 15px;
 }
 // Спойлер
 .spollers__item {
-	font-size: toRem(20);
+	font-family: 'CircularStd';
 }
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
+	border-top: 1px solid $bg-menu-open;
+	font-size: toRem(18);
+	line-height: toRem(24);
+	letter-spacing: -1.4%;
+	padding: toRem(25) 0;
 	position: relative;
 	list-style: none;
+
+	@media (max-width:$mobile){
+		padding: toRem(16) toRem(20) toRem(16) 0;
+		font-size: toRem(16);
+		letter-spacing: -1.1%;
+	}
+
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
+
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			right: 10px;
+			right: 0px;
 			top: 50%;
-			background-color: #000;
+			background-color: #fff;
 			height: 2px;
-			width: 15px;
+			width: 16px;
+			border-radius: toRem(16);
 			transition: transform 0.5s ease 0s;
 		}
 		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
+			transform: translate(0, -50%);
 		}
 		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
+			transform: translate(0, -50%) rotate(-90deg);
 		}
 		&._spoller-active {
+			// border-bottom: none;
+
 			&::before {
-				transform: translateX(-75%) rotate(-40deg);
+				transform: rotate(45deg);
 			}
 			&::after {
-				transform: rotate(40deg);
+				transform: rotate(-45deg);
 			}
 		}
-		/*
-		._spoller-init & {
-			position: relative;
-			width: 100%;
-			text-align: left;
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				right: 0;
-				top: toRem(12);
-				height: toRem(1);
-				transition: all 0.3s ease 0s;
-				width: toRem(10);
-				background-color: #000;
-			}
-			&::before {
-				transform: rotate(40deg);
-				right: toRem(7);
-			}
-			&::after {
-				transform: rotate(-40deg);
-			}
-		}
-		&._spoller-active {
-			&::before {
-				transform: rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-		*/
 	}
 }
+
+
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
+	padding: toRem(25) 0;
+	font-size: toRem(16);
+	color: $text-default;
+	font-weight: 400;
+
+	@media (max-width:$mobile){
+		padding: toRem(16) 0;
+	}
 }

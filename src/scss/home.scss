@@ -32,14 +32,9 @@
 
         &-deco {
             position: absolute;
-            bottom: -30%;
-            left: -8%;
-            width: toRem(277);
-            height: toRem(24);
-
-            @media (max-width:$mobile){
-                    @include adaptiveValue("width", 277, 115); 
-            }
+            margin-left: auto;
+            margin-right: auto;
+            inset: auto 0% toRem(-15);
         }
     }
 
@@ -75,10 +70,10 @@
 // Statistic section
 
 .statistics {
-    margin-bottom: toRem(128);
+    margin-bottom: toRem(78);
 
     @media (max-width:$mobile){
-        margin-bottom: toRem(66);
+        margin-bottom: toRem(41);
     }
 
     &__wrapper {
@@ -123,19 +118,20 @@
 
 .projects {
     position: relative;
+
+    &__info-block {
+        padding-top: 0;
+    }
     
     &__info-block-arrow {
         width: toRem(32);
         height: toRem(100);
-        position: absolute;
-        top: -15%;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-bottom: toRem(30);
 
         @media (max-width:$mobile){
             width: toRem(20);
             height: toRem(50);
-            top: -9%;
+            margin-bottom: toRem(15);
         }
     }
 
@@ -240,4 +236,55 @@
     }
 }
 
+// Question section 
+
+.question {
+    padding-bottom: toRem(80);
+
+    @media (max-width:$mobile){
+        padding-bottom: toRem(40);
+    }
+
+    &__info-block {}
+
+    span {
+        position: relative;
+    }
+
+    &__info-block-title-deco {
+        width: toRem(230); 
+        height: toRem(64);
+        position: absolute;
+        inset: auto -30px -12px auto;
+
+        @media (max-width:$mobile){
+            width: toRem(129); 
+            height: toRem(36);
+            inset: auto -8px -8px auto;
+        }
+    }
+}
+
+// Application section 
+
+.application {
+    span {
+        position: relative;
+    }
+
+    &__info-block-title-deco {
+        position: absolute;
+        inset: 40px -10px -10px auto;
+        width: toRem(161);
+        height: toRem(16);
+
+        @media (max-width:$mobile){
+            inset: auto 2px -10px auto;
+            width: toRem(81);
+            height: toRem(8); 
+        }
+    }
+}
+
 //====================================================================================================
+
