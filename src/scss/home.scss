@@ -3,7 +3,6 @@
 // Hero section 
 
 .hero {
-
     &__content {
         padding: toRem(80) 0;
 
@@ -268,6 +267,12 @@
 // Application section 
 
 .application {
+    padding-bottom: toRem(80);
+
+    @media (max-width:$mobile){
+        padding-bottom: toRem(40);
+    }
+
     span {
         position: relative;
     }
@@ -284,7 +289,151 @@
             height: toRem(8); 
         }
     }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: toRem(24);
+        justify-content: center;
+        align-items: center;
+        max-width: toRem(1224);
+        margin: 0 auto;
+        
+        @media (max-width: toEm(1253)){
+            padding: 0 toRem(24);
+        }
+
+        @media (max-width:$tablet){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__cadr {
+        display: block;
+        min-height: toRem(480);
+        max-width: toRem(392);
+        position: relative;
+        z-index: 1;
+
+        &-1 {
+            transform: translateY(-16px) rotate(-1deg);
+        }
+
+        &-2 {
+            transform: rotate(3deg);
+        }
+
+        &-3 {
+            transform: rotate(-2deg);
+            transform: translateY(-8px) rotate(-1deg);
+        }
+
+        @media (max-width:$tablet){
+            justify-self: center;
+            min-height: toRem(320);
+        }
+
+        @media (max-width:$mobile){
+            width: 100%;
+        }
+    }
+
+    &__cadr-arrow {
+        position: absolute;
+        height: toRem(40);
+        width: toRem(120);
+
+        @media (max-width:$tablet){
+            height: toRem(30);
+            width: toRem(90);
+            transform: rotate(90deg);
+        }
+    }
+
+    &__cadr-arrow-top {
+        inset: 5px auto auto -100px;
+
+        @media (max-width:$tablet){
+            inset: -30px auto auto 15px;
+        }
+    }
+
+    &__cadr-arrow-bottom {
+        inset: auto auto 107px -80px;
+
+        @media (max-width:$tablet){
+            inset: -30px auto auto -35px;
+        }
+    }
+
+    &__cadr-number {
+        font-family: 'NanumPenScript';
+        font-size: toRem(64);
+        margin-bottom: toRem(26);
+    }
+
+    &__cadr-title {
+        margin-bottom: toRem(10);
+    }
 }
+
+// Action section 
+
+.action {
+    padding: toRem(80) toRem(24);
+
+    @media (max-width:$mobile){
+        padding: toRem(40) toRem(24);
+    }
+
+    &__wrapper {
+        max-width: toRem(1224);
+        margin: 0 auto;
+        padding: toRem(40) toRem(24);
+        text-align: center;
+        border-radius: toRem(16);
+        background-image: linear-gradient(to top, #6966ff, #514fbc);
+
+        @media (max-width:$mobile){
+            padding: toRem(40) toRem(16);  
+        }
+    }
+
+    &__ques {
+        font-size: toRem(18);
+        letter-spacing: -1.4%;
+        margin-bottom: toRem(8);
+
+        @media (max-width:$mobile){
+            font-size: toRem(16);
+            letter-spacing: -1.1%;
+        }
+    }
+
+    &__title {
+        font-size: toRem(40);
+        font-weight: 700;
+        letter-spacing: -2.2%;
+        line-height: toRem(48);
+        margin-bottom: toRem(40);
+
+        @media (max-width:$mobile){
+            font-size: toRem(24);
+            letter-spacing: -1.7%;
+            line-height: toRem(32);
+        }
+    }
+
+    &__button {
+        color: $accent;
+        background-color: #fff;
+
+        @media (max-width: toEm(432)){
+            width: 100%; 
+        }
+    }
+}
+
 
 //====================================================================================================
 

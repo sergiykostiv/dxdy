@@ -4,6 +4,7 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
+	border-bottom: solid 1px $bg-menu-open;
 	// gap: 15px;
 }
 // Спойлер
@@ -42,7 +43,7 @@
 			position: absolute;
 			right: 0px;
 			top: 50%;
-			background-color: #fff;
+			background-color: #FFF;
 			height: 2px;
 			width: 16px;
 			border-radius: toRem(16);
@@ -55,7 +56,6 @@
 			transform: translate(0, -50%) rotate(-90deg);
 		}
 		&._spoller-active {
-			// border-bottom: none;
 
 			&::before {
 				transform: rotate(45deg);
