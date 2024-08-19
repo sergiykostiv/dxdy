@@ -50,13 +50,13 @@
         font-family: SpaceMono;
 		line-height: toRem(24);
 		font-size: toRem(16);
-		color: $text-default;
+		color: $secondary;
 		transition: all .3s;
 		border-radius: toRem(8);
         padding: toRem(12) toRem(16);
 
         &:hover {
-			color: $text-primary;
+			color: $primary;
 			background-color: $nav-hover;
 		}
 
@@ -76,10 +76,17 @@
         display: inline-flex;
         justify-content: space-between;
         column-gap: toRem(32);
+    }
+}
 
-        img {
-            fill: #000;
-        }
+.menu__cocial-svg {
+    width: toRem(24);
+    height: toRem(24);
+    color: $secondary;
+    transition: color .3s;
+
+    &:hover {
+        color: $white;
     }
 }
 

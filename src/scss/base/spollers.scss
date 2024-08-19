@@ -4,7 +4,7 @@
 // Блок зі спойлерами
 .spollers {
 	display: grid;
-	border-bottom: solid 1px $bg-menu-open;
+	border-bottom: solid 1px $secondary-site;
 	// gap: 15px;
 }
 // Спойлер
@@ -16,7 +16,7 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border-top: 1px solid $bg-menu-open;
+	border-top: 1px solid $secondary-site;
 	font-size: toRem(18);
 	line-height: toRem(24);
 	letter-spacing: -1.4%;
@@ -43,7 +43,7 @@
 			position: absolute;
 			right: 0px;
 			top: 50%;
-			background-color: #FFF;
+			background-color: $white;
 			height: 2px;
 			width: 16px;
 			border-radius: toRem(16);
@@ -72,7 +72,7 @@
 .spollers__body {
 	padding: toRem(25) 0;
 	font-size: toRem(16);
-	color: $text-default;
+	color: $secondary;
 	font-weight: 400;
 
 	@media (max-width:$mobile){

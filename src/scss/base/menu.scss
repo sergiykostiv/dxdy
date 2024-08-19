@@ -20,7 +20,7 @@
 			overflow: auto;
 			padding: toRem(160) toRem(15) toRem(48) toRem(30);
 			transition: all 0.5s;
-			background-color: $bg-menu-open;
+			background-color: $secondary-site;
 
 			&::before {
 				content: "";
@@ -29,7 +29,7 @@
 				height: toRem(70);
 				left: 100%;
 				top: 0;
-				background-color: $bg-menu-open;
+				background-color: $secondary-site;
 				transition: left 0.5s;
 				z-index: 5;
 			}
@@ -66,13 +66,13 @@
 		font-family: SpaceMono;
 		line-height: toRem(24);
 		font-size: toRem(16);
-		color: $text-default;
+		color: $secondary;
 		padding: toRem(12) toRem(16);
 		transition: all .3s;
 		border-radius: toRem(8);
 
 		&:hover {
-			color: $text-primary;
+			color: $primary;
 			background-color: $nav-hover;
 		}
 
@@ -83,10 +83,9 @@
 		@media (max-width: toEm(884)){
 			padding: 0;
 			font-size: toRem(20);
-			color: $text-primary;
+			color: $primary;
 
 			&:hover {
-			// color: $text-primary;
 				background-color: transparent;
 			}
 		}

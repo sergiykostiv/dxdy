@@ -10,19 +10,18 @@ $black: #000000; // Black color
 // Background colors (Фонові кольори):
 
 $bg-primary: #1C1C28; // BG primary background color - (Основний фоновий колір сайту)
-$bg-menu-open: #393953; // BG open menu burger
 $nav-hover: #4F4C64; // BG navigation bar item
 
 // Site colors (Кольори сайту):
 
 $accent: #6966FF; // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
-$secondary: #393953;
+$secondary-site: #393953;
 
 // Text colors (Текстові кольори):
 
-$text-primary: #FFFFFF; // Text primary text color - (Основний текстовий колір сайту)
-$text-default: #C8C7D8; // Default text navigation bar
-$text-card-gray: #A59EBA; // Grey text on cards
+$primary: #FFFFFF; // Text primary text color - (Основний текстовий колір сайту)
+$secondary: #C8C7D8; // Default text navigation bar
+$tertiary: #A59EBA; // Grey text on cards
 
 :root {
 

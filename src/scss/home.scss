@@ -92,7 +92,7 @@
     }
 
     &__point {
-        color: $text-primary;
+        color: $primary;
         line-height: toRem(32);
         font-size: toRem(20);
 
@@ -102,7 +102,7 @@
     }
 
     &__description {
-        color: $text-default;
+        color: $secondary;
         font-size: toRem(18);
         line-height: toRem(24);
 
@@ -426,14 +426,13 @@
 
     &__button {
         color: $accent;
-        background-color: #fff;
+        background-color: $primary;
 
         @media (max-width: toEm(432)){
             width: 100%; 
         }
     }
 }
-
 
 //====================================================================================================
 

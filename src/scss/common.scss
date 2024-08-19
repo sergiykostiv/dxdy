@@ -1,7 +1,7 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .main__button {
-    background-color: #6966FF;
+    background-color: $accent;
     padding: toRem(12) toRem(16);
     border-radius: toRem(7);
     line-height: toRem(24);
@@ -16,7 +16,7 @@
 }
 
 .second__button {
-    background-color: $secondary;
+    background-color: $secondary-site;
 }
 
 .info-block {
@@ -44,7 +44,7 @@
     }
 
     &__description {
-        color: $text-default;
+        color: $secondary;
         font-size: toRem(18);
         line-height: toRem(24);
         letter-spacing: -1.4%;
@@ -98,7 +98,7 @@
 }
 
 .card-sub-title {
-    color: $text-card-gray;
+    color: $tertiary;
     font-family: "SpaceMono";
     font-size: toRem(16);
     line-height: toRem(24);
@@ -124,7 +124,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: $bg-menu-open;
+    background-color: $secondary-site;
     border-radius: toRem(16);
     padding: toRem(24);
     object-fit: cover;
