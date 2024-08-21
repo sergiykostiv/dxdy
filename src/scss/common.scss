@@ -9,6 +9,11 @@
     font-size: toRem(16);
     font-weight: 500;
     white-space: nowrap;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $accent-hover;
+    }
 
     @media (max-width:$mobile){
         padding: toRem(10) toRem(14);
@@ -17,6 +22,11 @@
 
 .second__button {
     background-color: $secondary-site;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $nav-hover;
+    }
 }
 
 .info-block {
@@ -68,8 +78,15 @@
         letter-spacing: -1.4%;
 
         &-arrow {
+            transition: transform .3s;
             width: 24px;
             height: 24px;
+        }
+
+        &:hover {
+            .info-block__action-arrow {
+                transform: translateX(10px);
+            }
         }
 
         @media (max-width:$mobile){
@@ -112,6 +129,11 @@
     font-size: toRem(16);
     line-height: toRem(24);
     letter-spacing: -1.1%;
+    text-overflow: ellipsis;
+    overflow: hidden;   
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 
     @media (max-width:$mobile){
         line-height: toRem(20);
@@ -128,6 +150,7 @@
     border-radius: toRem(16);
     padding: toRem(24);
     object-fit: cover;
+    transition: background-color 0.3s;
 
     &__category {
         margin-bottom: toRem(8);
@@ -141,18 +164,37 @@
         margin-bottom: toRem(16);
     }
 
-    &__avatar-list {
+    &-bottom {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: toRem(40);
     }
 
-    &__avatar-item {
-        &:not(:first-child) {
-            transform: translateX(-20px);
+    &-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    &-status {
+        padding: toRem(4) toRem(16);
+        letter-spacing: -1.1%;
+        border-radius: 50px;
+        line-height: toRem(24);
+
+        &-completed {
+            background-color: $green;
+        }
+
+        &-funded {
+            color: $secondary;
+            background-color: $bg-primary;
+            border: solid 1px $secondary-site;
         }
     }
 
-    &__avatar-img {
-        border-radius: 50px;
-        border: solid 2px transparent;
+    &:hover {
+        background-color: $nav-hover;
     }
 }

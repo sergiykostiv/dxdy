@@ -1,5 +1,4 @@
 .header {
-
     &__wrapper {
         position: relative;
         z-index: 1;
@@ -32,9 +31,6 @@
         &-img {
             @include adaptiveValue("width", 112, 80);
             @include adaptiveValue("height", 66, 48);
-        }
-
-        @media (max-width:$mobile){
         }
     }
 
