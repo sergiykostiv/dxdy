@@ -153,7 +153,35 @@
 
     &__slide {
         @include adaptiveValue("max-width", 392, 256);
-        // @include adaptiveValue("height", 590, 480);
+    }
+
+    &__category {
+        margin-bottom: toRem(8);
+    }
+
+    &__title {
+        margin-bottom: toRem(8);
+    }
+
+    &__description {
+        text-overflow: ellipsis;
+        overflow: hidden;   
+        display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: toRem(40);
+
+        &-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -457,3 +485,43 @@
 
 //====================================================================================================
 
+// Discover initiatives page 
+
+//====================================================================================================
+
+.init-head {
+    &__title {
+        margin-bottom: toRem(24);
+    }
+}
+
+.init-card {
+    padding: toRem(80) 0;
+
+    @media (max-width:$mobile){
+        padding: toRem(40) 0;
+    }
+
+    &__item {
+        flex-direction: row;
+        column-gap: toRem(32);
+        margin-bottom: toRem(24);
+
+        &:last-child {
+            margin-bottom: toRem(0);
+        }
+
+        @media (max-width:$mobile){
+            flex-direction: column;
+            row-gap: toRem(16);
+        }
+    }
+
+    &__title {
+        margin-bottom: toRem(8);
+    }
+
+    &__text {
+        margin-bottom: toRem(8);
+    }
+}

@@ -102,46 +102,6 @@
     }
 }
 
-.card-title {
-    font-size: toRem(24);
-    line-height: toRem(32);
-    font-weight: 700;
-    letter-spacing: -1.9%;
-
-    @media (max-width:$mobile){
-        font-size: toRem(20);
-        letter-spacing: -1.7%;
-    }
-}
-
-.card-sub-title {
-    color: $tertiary;
-    font-family: "SpaceMono";
-    font-size: toRem(16);
-    line-height: toRem(24);
-
-    @media (max-width:$mobile){
-        font-size: toRem(14);
-    }
-}
-
-.card-text {
-    font-size: toRem(16);
-    line-height: toRem(24);
-    letter-spacing: -1.1%;
-    text-overflow: ellipsis;
-    overflow: hidden;   
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-
-    @media (max-width:$mobile){
-        line-height: toRem(20);
-        font-size: toRem(14);
-        letter-spacing: -0.6%;
-    }
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -152,32 +112,43 @@
     object-fit: cover;
     transition: background-color 0.3s;
 
-    &__category {
-        margin-bottom: toRem(8);
+    &-title {
+        font-size: toRem(24);
+        line-height: toRem(32);
+        font-weight: 700;
+        letter-spacing: -1.9%;
+
+        @media (max-width:$mobile){
+            font-size: toRem(20);
+            letter-spacing: -1.7%;
+        }
     }
 
-    &__title {
-        margin-bottom: toRem(8);
+    &-sub-title {
+        color: $tertiary;
+        font-family: "SpaceMono";
+        font-size: toRem(16);
+        line-height: toRem(24);
+
+        @media (max-width:$mobile){
+            font-size: toRem(14);
+        }
     }
 
-    &__amount {
-        margin-bottom: toRem(16);
-    }
+    &-text {
+        font-size: toRem(16);
+        line-height: toRem(24);
+        letter-spacing: -1.1%;
 
-    &-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: toRem(40);
-    }
-
-    &-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        @media (max-width:$mobile){
+            line-height: toRem(20);
+            font-size: toRem(14);
+            letter-spacing: -0.6%;
+        }    
     }
 
     &-status {
+        display: inline-flex;
         padding: toRem(4) toRem(16);
         letter-spacing: -1.1%;
         border-radius: 50px;
@@ -192,9 +163,102 @@
             background-color: $bg-primary;
             border: solid 1px $secondary-site;
         }
+
+        &-open {
+            background-color: $accent;
+        }
     }
 
     &:hover {
         background-color: $nav-hover;
+    }
+}
+
+.page {
+    &-head {
+        text-align: center;
+        padding: toRem(80) 0 toRem(40);
+
+        @media (max-width:$mobile){
+            padding: toRem(24) 0 toRem(43);
+        }
+    }
+
+    &-title {
+        font-size: toRem(60);
+        line-height: toRem(72);
+        letter-spacing: -2.2%;
+        font-weight: 700;
+        
+        @media (max-width:$tablet){
+            @include adaptiveValue("font-size",60, 32);
+            @include adaptiveValue("line-height", 72, 40);
+            letter-spacing: -1.7%;
+        }
+    }
+
+    &-subtitle {
+        color: $secondary;
+        font-size: toRem(18);
+        line-height: toRem(24);
+        letter-spacing: -1.4%;
+    }
+}
+
+.filter {
+    
+    &-wrapper {
+        position: relative;
+    }
+
+    &-arrow {
+        display: none;
+
+        @media (max-width:$mobile) {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: toRem(16);
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+        }  
+    }
+        
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        column-gap: toRem(24);
+        color: $primary;
+
+        @media (max-width:$mobile){
+            column-gap: toRem(16);
+            padding-left: toRem(24);
+            justify-content: start;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            padding-right: 10%;
+        }
+    }
+
+    &-item {
+        font-size: toRem(16);
+        line-height: toRem(24);
+        letter-spacing: -1.1%;
+        font-weight: 500;
+        padding: toRem(12) toRem(16);
+        border-radius: toRem(7.29);
+        transition: background-color .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary-site;
+        }
+
+        @media (max-width:$mobile){
+            font-size: toRem(14);
+            line-height: toRem(20);
+        }
     }
 }
