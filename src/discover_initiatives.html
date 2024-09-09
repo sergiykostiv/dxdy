@@ -15,22 +15,24 @@
                         </p>
                     </div>
                 </section>
-                <section class="filter">
+                <section class="init-filter filter">
                     <div class="filter-wrapper">
                             <ul class="filter-list">
-                                <li class="filter-item">All</li>
-                                <li class="filter-item">Open</li>
-                                <li class="filter-item">Funded</li>
-                                <li class="filter-item">Completed</li>
+                                <li data-id="all" class="filter-item filter-active">All</li>
+                                <li data-id="open" class="filter-item">Open</li>
+                                <li data-id="founded" class="filter-item">Funded</li>
+                                <li data-id="completed" class="filter-item">Completed</li>
                             </ul>
-                            <svg class="filter-arrow">
-                                <use xlink:href="@img/icons/icons.svg#fi_chevron-right"></use>
-                            </svg>
+                            <div class="filter-arrow-wr">
+                                <svg class="filter-arrow">
+                                    <use xlink:href="@img/icons/icons.svg#fi_chevron-right"></use>
+                                </svg>
+                            </div>
                         </div>
                 </section>
                 <section class="init-card">
                     <div class="init-card__container">
-                        <div class="init-card__item card">
+                        <a href="" class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Funding Rate Page</h4>
                                 <p class="init-card__text card-text">
@@ -41,8 +43,8 @@
                             <div class="init-card__status">
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
-                        </div>
-                        <div class="init-card__item card">
+                        </a>
+                        <div class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">CLI Trading Tool</h4>
                                 <p class="init-card__text card-text">
@@ -54,7 +56,7 @@
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card open">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">New Language SDKs</h4>
                                 <p class="init-card__text card-text">
@@ -66,7 +68,7 @@
                                 <div class="init-card__status card-status card-status-open">Open</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card completed">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Liquidation Alert Tool</h4>
                                 <p class="init-card__text card-text">
@@ -78,7 +80,7 @@
                                 <div class="init-card__status card-status card-status-completed">Completed</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Governance Dashboard</h4>
                                 <p class="init-card__text card-text">
@@ -90,7 +92,7 @@
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Delegation Tool</h4>
                                 <p class="init-card__text card-text">
@@ -102,7 +104,7 @@
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Newsletter</h4>
                                 <p class="init-card__text card-text">
@@ -114,7 +116,7 @@
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card founded">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Academy Contributions</h4>
                                 <p class="init-card__text card-text">
@@ -126,7 +128,7 @@
                                 <div class="init-card__status card-status card-status-funded">Funded</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
+                        <div class="init-card__item card open">
                             <div class="init-card__content">
                                 <h4 class="init-card__title card-title">Discord bots</h4>
                                 <p class="init-card__text card-text">
@@ -138,8 +140,8 @@
                                 <div class="init-card__status card-status card-status-open">Open</div>
                             </div>
                         </div>
-                        <div class="init-card__item card">
-                            <div class="init-card__content">
+                        <div class="init-card__item card founded">
+                            <div class="init-card__content f-founded">
                                 <h4 class="init-card__title card-title">Reward tracking & Simulator</h4>
                                 <p class="init-card__text card-text">
                                     Page or tool that allows traders to calculate future rewards and simulate earnings from activity
@@ -165,6 +167,10 @@
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
+
+        <script src="/src/js/libs/filter.js"></script>
 		@@include('html/_js.htm',{})
+
+        
 	</body>
 </html>

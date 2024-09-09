@@ -37,6 +37,7 @@
 
 	._spoller-init & {
 		cursor: pointer;
+		
 		&::before,
 		&::after {
 			content: "";

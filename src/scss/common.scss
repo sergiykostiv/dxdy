@@ -211,6 +211,25 @@
         position: relative;
     }
 
+    &-active {
+        background-color: $secondary-site;
+    }
+
+    
+    &-arrow-wr {
+        display: none;
+        
+        @media (max-width:$mobile){
+            display: block; 
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: toRem(100);
+            background-image: linear-gradient(to right, transparent, $bg-primary);;
+        }
+    }
+
     &-arrow {
         display: none;
 
@@ -259,6 +278,7 @@
         @media (max-width:$mobile){
             font-size: toRem(14);
             line-height: toRem(20);
+            padding: toRem(10) toRem(12);
         }
     }
 }
