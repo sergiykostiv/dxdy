@@ -172,15 +172,10 @@
     }
 
     &__button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: toRem(40);
+        
 
         &-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            
         }
     }
 }
@@ -524,4 +519,63 @@
     &__text {
         margin-bottom: toRem(8);
     }
+}
+
+//====================================================================================================
+
+// Funded grands page 
+
+//====================================================================================================
+
+
+.funded {
+    &__container {
+        max-width: toRem(1224);
+    }
+
+    &__filter-list {
+        justify-content: start;
+    }
+
+    &__switch {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(16);
+        margin: toRem(24) 0;
+    }
+}
+
+input[type="checkbox"]  {
+    position: relative;
+    width: toRem(34);
+    height: toRem(14);
+    -webkit-appearance: none;
+    outline: none;
+    background-color: $nav-hover;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+input:checked[type="checkbox"] {
+    background-color: $accent;
+}
+
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: toRem(20);
+    height: toRem(20);
+    transform: scale(1.1);
+    border-radius: 50%;
+    background-color: $white;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: calc(100% - toRem(20));
 }
