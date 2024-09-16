@@ -227,7 +227,6 @@
     &-active {
         background-color: $secondary-site;
     }
-
     
     &-arrow-wr {
         display: none;
@@ -263,6 +262,7 @@
         justify-content: center;
         column-gap: toRem(24);
         color: $primary;
+        white-space: nowrap;
 
         @media (max-width:$mobile){
             column-gap: toRem(16);
