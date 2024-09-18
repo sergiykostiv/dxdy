@@ -35,6 +35,11 @@ function filter() {
             // Викликаємо функцію getItems, передаючи їй клас для фільтрації
             getItems(targetId === 'all' ? 'filter-card' : targetId);
         }
+
+        if (['all', 'technicalToolDevelopment', 'dovernance', 'growthMarketing', 'analytics', 'thirdPartyProvider'].includes(targetId)) {
+            // Викликаємо функцію getItems, передаючи їй клас для фільтрації
+            getItems(targetId === 'all' ? 'filter-card' : targetId);
+        }
     });
 }
 

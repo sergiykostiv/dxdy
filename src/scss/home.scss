@@ -542,6 +542,10 @@
 
     &__card {
         min-height: toRem(580);
+
+        @media (max-width:$mobile){
+            min-height: toRem(480);
+        }
     }
 
     &__cards-wrapper {

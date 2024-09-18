@@ -204,7 +204,7 @@
         font-weight: 700;
         
         @media (max-width:$tablet){
-            @include adaptiveValue("font-size",60, 32);
+            @include adaptiveValue("font-size", 60, 32);
             @include adaptiveValue("line-height", 72, 40);
             letter-spacing: -1.7%;
         }
@@ -260,11 +260,13 @@
     &-list {
         display: flex;
         justify-content: center;
-        column-gap: toRem(24);
+        flex-wrap: wrap;
+        gap: toRem(24);
         color: $primary;
         white-space: nowrap;
 
-        @media (max-width:$mobile){
+        @media (max-width:$mobile) {
+            flex-wrap: nowrap;
             column-gap: toRem(16);
             padding-left: toRem(24);
             justify-content: start;
