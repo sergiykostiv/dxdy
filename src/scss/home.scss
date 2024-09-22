@@ -609,3 +609,93 @@ input[type="checkbox"]:before {
 input:checked[type="checkbox"]:before {
     left: calc(100% - toRem(20));
 }
+
+//====================================================================================================
+
+// Program expenses page 
+
+//====================================================================================================
+
+.program {
+    &__cards {
+        padding: toRem(80) 0;
+
+        @media (max-width:$mobile){
+            padding: toRem(40) 0;
+        }
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(24);
+
+        @media (max-width:$mobile){
+             gap: toRem(16); 
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        @media (max-width:$mobile){
+            padding: toRem(16); 
+        }
+    }
+
+    &__card-title {
+        font-size: toRem(20);
+        line-height: toRem(24);
+        margin-bottom: toRem(8);
+
+        @media (max-width:$mobile){
+            margin-bottom: 0;
+            font-size: toRem(16);
+            line-height: toRem(24);
+        }
+    }
+
+    &__card-status {
+        display: flex;
+        align-items: flex-start;
+        column-gap: toRem(16);
+    }
+
+    &__card-sub-title {
+        margin-bottom: toRem(16);
+
+        @media (max-width:$mobile){
+            margin-bottom: toRem(8);
+            font-size: toRem(14);
+            line-height: toRem(24);
+        }
+    }
+
+    &__card-description {
+        @media (max-width:$mobile){
+            font-size: toRem(14);
+            line-height: toRem(24);
+        }
+    }
+
+    &__card-status--price {
+        color: $white;
+    }
+
+    &__card-status--arrow {
+        width: toRem(24);
+        height: toRem(24);
+        color: $tertiary;
+
+        @media (max-width:$mobile){
+             display: none; 
+        }
+    }
+
+    &__card-status--link {
+        display: flex;
+        align-items: start;
+    }
+}
