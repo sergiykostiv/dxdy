@@ -699,3 +699,73 @@ input:checked[type="checkbox"]:before {
         align-items: start;
     }
 }
+
+//====================================================================================================
+
+// Blog page 
+
+//====================================================================================================
+
+.blog {
+    &__cards {
+        padding: toRem(80) 0;
+
+        @media (max-width:$mobile){
+            padding: toRem(40) 0;
+        }
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(24);
+        flex-wrap: wrap;
+
+        @media (max-width:$tablet){
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        padding: 0;
+        width: toRem(392);
+        
+        &:hover {
+            background-color: $secondary-site;
+        }
+    }
+
+    &__item-img {
+        height: toRem(224);
+
+        border: solid 5px $accent;
+        border-radius: toRem(16);
+
+        @media (max-width:$mobile){
+            height: 50%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: toRem(16);
+            object-fit: cover;
+        }
+    }
+
+    &__item-text {
+        padding: toRem(24);
+    }
+
+    &__item-category {
+        margin-bottom: toRem(8);
+    }
+
+    &__item-title {
+        margin-bottom: toRem(64);
+    }
+
+    &__item-date {
+        margin-top: toRem(16);
+    }
+}
