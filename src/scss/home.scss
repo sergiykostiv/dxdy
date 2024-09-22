@@ -769,3 +769,43 @@ input:checked[type="checkbox"]:before {
         margin-top: toRem(16);
     }
 }
+
+//====================================================================================================
+
+// FAQ page 
+
+//====================================================================================================
+
+.faq {
+    &__spoller-wrapper {
+        padding: toRem(80) 0;
+
+        @media (max-width:$mobile){
+            padding: toRem(40) 0;
+        }
+    }
+
+    &__spoller-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(80);
+
+        @media (max-width:$mobile){
+            row-gap: toRem(50); 
+        }
+    }
+
+    &__spoller-title {
+        font-size: toRem(24);
+        line-height: toRem(32);
+        font-weight: 700;
+        letter-spacing: -1.9%;
+        margin-bottom: toRem(40);
+
+        @media (max-width:$mobile) {
+            font-size: toRem(20);
+            letter-spacing: -1.7%;
+            margin-bottom: toRem(20);
+        }
+    }
+}
