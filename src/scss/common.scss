@@ -297,3 +297,28 @@
         }
     }
 }
+
+.par {
+    &-title {
+        font-size: toRem(18);
+        line-height: toRem(24);
+        letter-spacing: -1.4%;
+        font-weight: 500;
+        margin-bottom: toRem(16);
+
+        @media (max-width:$mobile){
+            font-size: toRem(16);
+            letter-spacing: -1.1%;
+            font-weight: 700;
+        }
+    }
+
+    &-description {
+        color: $secondary;
+        font-size: toRem(16);
+        line-height: toRem(24);
+        font-weight: 400;
+        letter-spacing: -1.1%;
+        margin-bottom: toRem(40);
+    }
+}
