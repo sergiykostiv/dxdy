@@ -299,6 +299,8 @@
 }
 
 .par {
+    margin-bottom: toRem(40);
+
     &-title {
         font-size: toRem(18);
         line-height: toRem(24);
@@ -319,6 +321,5 @@
         line-height: toRem(24);
         font-weight: 400;
         letter-spacing: -1.1%;
-        margin-bottom: toRem(40);
     }
 }

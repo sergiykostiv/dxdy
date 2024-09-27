@@ -1114,13 +1114,18 @@ input:checked[type="checkbox"]:before {
         }
     }
 
-    &__team-item {
+    &__team-link {
         display: flex;
         align-items: center;
         gap: toRem(16);
         padding: toRem(8) toRem(24) toRem(8) toRem(8);
         background-color: $secondary-site;
         border-radius: toRem(50);
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $nav-hover; 
+        }
     }
 
     &__team-item--avatar {
@@ -1131,6 +1136,18 @@ input:checked[type="checkbox"]:before {
         @media (max-width:$mobile){
             width: 24px;
             height: 24px;
+        }
+    }
+
+    &__team-item--name {
+        font-size: toRem(16);
+        line-height: toRem(24);
+        letter-spacing: -1.1%;
+        font-weight: 500;
+
+        @media (max-width:$mobile){
+            font-size: toRem(14);
+            line-height: toRem(20);
         }
     }
 
@@ -1146,5 +1163,145 @@ input:checked[type="checkbox"]:before {
         @media (max-width:$tablet){
             display: none; 
         }
+    }
+
+    // section content
+
+    &__grands {
+        padding: toRem(80) 0;
+
+        @media (max-width:$mobile){
+            padding: toRem(40) 0; 
+        }
+    }
+
+    &__grands-info-block {
+        margin-bottom: toRem(80);
+
+        @media (max-width:$mobile){
+            margin-bottom: toRem(40); 
+        }
+    }
+
+    &__content {
+        padding: toRem(40) 0 toRem(80);
+
+        @media (max-width:$mobile){
+             padding: toRem(40) 0; 
+        }
+    }
+
+    &__content-list {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(16);
+    }
+
+    &__content-list--link {
+        color: $accent;
+        display: flex;
+        align-items: center;
+        gap: toRem(8);
+    }
+
+    &__button-img {
+        color: $accent;
+        width: 16px;
+        height: 16px;
+    }
+
+    &__card-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(16);
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @media (max-width:$mobile){
+            flex-direction: column;
+            padding: toRem(16);
+        }
+    }
+
+    &__card-status {
+        display: flex;
+        align-items: center;
+        gap: toRem(16);
+
+        @media (max-width:$mobile){
+            width: 100%;
+            justify-content: space-between; 
+        }
+    }
+
+    &__card-title {
+        margin-bottom: toRem(8);
+
+        @media (max-width:$mobile){
+            margin-bottom: 0; 
+        }
+    }
+
+    &__card-description {
+        @media (max-width:$mobile){
+            margin-bottom: toRem(16); 
+        }
+    }
+
+    &__card-status--price {
+        color: $white;
+    }
+
+    &__card-sub-title {
+        margin-bottom: toRem(16);
+
+        @media (max-width:$mobile){
+            margin-bottom: toRem(8); 
+        }
+    }
+
+    &__card-status--arrow {
+        color: $tertiary;
+        width: 24px;
+        height: 24px;
+    }
+
+    // Grands section
+
+    &__grands-wrapper {
+        display: flex;
+        gap: toRem(24);
+
+        @media (max-width:$mobile){
+            flex-direction: column; 
+        }
+    }
+
+    &__grands-title {
+        text-align: center;
+    }
+
+    &__grands-card {
+        min-height: toRem(560);
+
+        @media (max-width:$mobile){
+            min-height: toRem(480);
+        }
+    }
+
+    &__grands-card--category {
+        margin-bottom: toRem(8);
+    }
+
+    &__grands-card--description {
+        text-overflow: ellipsis;
+        overflow: hidden;   
+        display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
     }
 }
