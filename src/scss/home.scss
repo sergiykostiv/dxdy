@@ -164,11 +164,7 @@
     }
 
     &__description {
-        text-overflow: ellipsis;
-        overflow: hidden;   
-        display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        @include clipped-text (5);
     }
 }
 
@@ -567,11 +563,7 @@
     }
 
     &__card-description {
-        text-overflow: ellipsis;
-        overflow: hidden;   
-        display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        @include clipped-text (5);
     }
 }
 
@@ -956,31 +948,9 @@ input:checked[type="checkbox"]:before {
     }
 
     &__back-link {
-        position: absolute;
-        top: 96px;
-        left: -96px;
-        padding: toRem(12);
-        background-color: $secondary-site;
-        border-radius: 50%;
-        transform: rotate(180deg);
-        transition: background-color .3s;
-
-        &:hover {
-            background-color: $nav-hover;
-        }
-
         @media (max-width:$tablet){
             left: 0px;
         }
-
-        @media (max-width:$mobile){
-            display: none; 
-        }
-    }
-
-    &__back-link--img {
-        width: 24px;
-        height: 24px;
     }
 
     &__cards-wrapper {
@@ -1018,11 +988,7 @@ input:checked[type="checkbox"]:before {
     }
 
     &__card-description {
-        text-overflow: ellipsis;
-        overflow: hidden;   
-        display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        @include clipped-text (5);
     }
 }
 
@@ -1153,25 +1119,6 @@ input:checked[type="checkbox"]:before {
         @media (max-width:$mobile){
             font-size: toRem(14);
             line-height: toRem(20);
-        }
-    }
-
-    &__back-link {
-        position: absolute;
-        top: 96px;
-        left: -96px;
-        padding: toRem(12);
-        background-color: $secondary-site;
-        border-radius: 50%;
-        transform: rotate(180deg);
-        transition: background-color .3s;
-
-        &:hover {
-            background-color: $nav-hover;
-        }
-
-        @media (max-width:$tablet){
-            display: none; 
         }
     }
 
@@ -1308,11 +1255,7 @@ input:checked[type="checkbox"]:before {
     }
 
     &__grands-card--description {
-        text-overflow: ellipsis;
-        overflow: hidden;   
-        display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        @include clipped-text (5);
     }
 }
 
@@ -1403,25 +1346,8 @@ input:checked[type="checkbox"]:before {
     }
 
     &__back-link {
-        position: absolute;
-        top: 96px;
-        left: -96px;
-        padding: toRem(12);
-        background-color: $secondary-site;
-        border-radius: 50%;
-        transform: rotate(180deg);
-        transition: background-color .3s;
-
-        &:hover {
-            background-color: $nav-hover;
-        }
-
         @media (max-width:$tablet){
             left: 0px;
-        }
-
-        @media (max-width:$mobile){
-            display: none; 
         }
     }
 
@@ -1493,7 +1419,7 @@ input:checked[type="checkbox"]:before {
         }
     }
 
-    // 
+    // Grands section 
 
     &__grands-wrapper {
         display: grid;
@@ -1530,10 +1456,6 @@ input:checked[type="checkbox"]:before {
     }
 
     &__grands-card--description {
-        text-overflow: ellipsis;
-        overflow: hidden;   
-        display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        @include clipped-text (5);
     }
 }
